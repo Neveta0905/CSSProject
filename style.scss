@@ -41,6 +41,17 @@ header{
 	}
 }
 
+#Location{
+
+	padding-left: 10px;
+	margin-top: 10px;
+	*{
+		border: none;
+		background:none;
+		font-size: 30px;
+	}	
+}
+
 a{
 	text-decoration: none;
 	color: black;
@@ -49,7 +60,7 @@ a{
 
 section{
 	margin-left: 5px;
-	border-left: $color_3 solid 1px;
+	border-left: $color_3 solid 2px;
 	padding-left: 2px;
 }
 #Restaurants{
@@ -65,11 +76,12 @@ section{
 	@include margins(0,0,0,5px);
 	border: solid black 2px;
 	border-radius: 15px;
-	background: $color_3;
+	background: $color_2;
 	display: flex;
 	flex-direction: column;
 	flex-grow: 1;
 	max-width: 40%;
+	max-width: 300px;
 	margin-left: 5px;
 
 	figure{
@@ -157,7 +169,7 @@ section{
 }
 
 footer{
-	background: $color_3;
+	background: $color_1;
 	padding-bottom: 5px;
 	width: 100%;
 	font-size: 20px;
@@ -174,13 +186,13 @@ footer{
 #command{
 	margin-top: 15px;
 	width: 250px;
-	height: 30px;
+	height: 50px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin-left: auto;
 	margin-right: auto;
-	background: $color_1;
+	background: $color_2;
 
 	&:hover, &:hover *{
 		cursor: pointer;
@@ -190,6 +202,7 @@ footer{
 		background: none;
 		border:none;
 		color: white;
+		font-size: 30px;
 	}
 }
 
@@ -202,7 +215,7 @@ footer{
 	left: 0px;
 	visibility: hidden;
 	background: white;
-	animation-duration: 5ms;
+	animation-duration: 2000ms;
 	animation-name: loading;
 	justify-content: center;
 	display: flex;
