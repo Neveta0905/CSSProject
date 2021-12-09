@@ -93,6 +93,7 @@ section{
 			border-top-right-radius: 15px;
 			flex-grow: 1;
 			max-width: 100%;
+			object-fit: cover;
 		}
 	}
 
@@ -251,6 +252,7 @@ footer{
 	display: flex;
 	:nth-child(1){
 		flex: 1;
+		padding-left: 15px;
 	}
 
 	:nth-child(2){
@@ -273,15 +275,16 @@ footer{
 
 }
 section{
+	margin-left: 30px;
 	.buttons{
 		display: grid;
 		padding-right: 15px;
 		grid-row-gap: 7px;
 		@media (min-width: 600px){
-		 grid-template-columns: repeat(3, 1fr);
+			grid-template-columns: repeat(3, 1fr);
 		}
 		@media (max-width: 600px){
-		 grid-template-columns: repeat(2, 1fr);
+			grid-template-columns: repeat(2, 1fr);
 		}
 	}
 }
