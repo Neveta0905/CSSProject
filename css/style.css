@@ -1,7 +1,6 @@
 @font-face {
   font-family: 'ohmyfood';
-  src: url("../learning_curve_alt_G_bold_ot_ps.otf");
-  font-weight: none; }
+  src: url("../learning_curve_alt_G_bold_ot_ps.otf"); }
 * {
   font-family: 'ohmyfood', 'Calibri';
   font-weight: normal; }
@@ -66,8 +65,8 @@ section {
     .Restaurant figure img {
       height: 175px;
       width: 175px;
-      border-top-left-radius: 15px;
-      border-top-right-radius: 15px;
+      border-top-left-radius: 13px;
+      border-top-right-radius: 13px;
       flex-grow: 1;
       max-width: 100%;
       object-fit: cover; }
@@ -157,7 +156,6 @@ footer {
 #loader {
   width: 100%;
   height: 100%;
-  padding: auto;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -170,7 +168,6 @@ footer {
   align-items: center; }
   #loader_logo {
     animation: spinning_logo 0.5s linear infinite;
-    max-width: auto;
     height: 200px; }
 
 @keyframes loading {

@@ -17,7 +17,6 @@ $color_3: #99E2D0;
 @font-face{
 	font-family: 'ohmyfood';
 	src: url('../learning_curve_alt_G_bold_ot_ps.otf');
-	font-weight: none;
 }
 
 *{
@@ -210,7 +209,6 @@ footer{
 #loader{
 	width: 100%;
 	height: 100%;
-	padding: auto;
 	position: absolute;
 	top: 0px;
 	left: 0px;
@@ -224,7 +222,6 @@ footer{
 
 	&_logo{
 		animation:spinning_logo 0.5s linear infinite;
-		max-width: auto;
 		height: 200px;
 	}
 }
