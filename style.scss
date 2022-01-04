@@ -19,9 +19,16 @@ $color_3: #99E2D0;
 	src: url('../learning_curve_alt_G_bold_ot_ps.otf');
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap');
+
 *{
-	font-family: 'ohmyfood', 'Calibri';
+	font-family: 'Roboto', 'ohmyfood', 'Calibri';
 	font-weight: normal;
+}
+
+h1,h2{
+	font-family: 'Shrikhand','Roboto','ohmyfood','Calibri';
 }
 
 body{
@@ -329,7 +336,7 @@ button{
 				text-overflow: ellipsis;
 				overflow: hidden;
 				width: 100px;
-				font-size: 12px;
+				font-size: 14px;
 				font-family: 'High Tower Text';
 			}
 
