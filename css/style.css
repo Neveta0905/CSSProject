@@ -265,7 +265,8 @@ button {
     justify-content: center;
     transition: 500ms;
     border-top-right-radius: 13px;
-    border-bottom-right-radius: 13px; }
+    border-bottom-right-radius: 13px;
+    height: 100%; }
     button .meal_check i {
       align-self: center;
       font-size: 0px;
