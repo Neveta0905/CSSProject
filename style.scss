@@ -275,8 +275,8 @@ body{
 		opacity: 0.1;
 		transition: 50ms;
 		position: relative;
-		right: 39px;
-		top: 11px;
+		right: 38px;
+		top: 16px;
 		}
 
 	.fas:hover{
@@ -317,6 +317,10 @@ button{
 		flex: 1;
 		margin-right: 15px;
 		margin-bottom: 5px;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+
 		*{
 			margin: 0px;
 		}
@@ -325,6 +329,7 @@ button{
 			text-align: left;
 			margin-bottom: 5px;
 			font-size: 23px;
+			flex: 1;
 		}
 
 		&_price{

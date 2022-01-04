@@ -204,8 +204,8 @@ body {
     opacity: 0.1;
     transition: 50ms;
     position: relative;
-    right: 39px;
-    top: 11px; }
+    right: 38px;
+    top: 16px; }
   .header_restaurant .fas:hover {
     opacity: 1; }
 
@@ -237,13 +237,17 @@ button {
   button .meal_description {
     flex: 1;
     margin-right: 15px;
-    margin-bottom: 5px; }
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 100%; }
     button .meal_description * {
       margin: 0px; }
     button .meal_description :nth-child(1) {
       text-align: left;
       margin-bottom: 5px;
-      font-size: 23px; }
+      font-size: 23px;
+      flex: 1; }
     button .meal_description_price {
       display: flex; }
       button .meal_description_price :nth-child(1) {
