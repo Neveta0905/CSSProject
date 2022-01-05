@@ -320,6 +320,11 @@ button{
 		display: flex;
 		flex-direction: column;
 		height: 100%;
+		width: calc(100% - 30px);
+
+		@media (max-width: 415px) {
+			margin-right: 0px;
+		}
 
 		*{
 			margin: 0px;
@@ -330,6 +335,10 @@ button{
 			margin-bottom: 5px;
 			font-size: 23px;
 			flex: 1;
+
+			@media (max-width: 415px) {
+				font-size: 18px;
+			}
 		}
 
 		&_price{
@@ -348,6 +357,10 @@ button{
 			:nth-child(2){
 				font-weight: bold;
 				font-size: 25px;
+
+				@media (max-width: 415px) {
+				font-size: 15px;
+			}
 			}
 		}
 	}
@@ -361,6 +374,8 @@ button{
 		border-top-right-radius: 13px;
 		border-bottom-right-radius:13px;
 		height: 100%;
+		transition: 500ms;
+		flex-shrink: 0;
 
 		i{
 			align-self:center;
