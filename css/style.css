@@ -21,7 +21,7 @@ header {
   text-align: center;
   color: white;
   border-bottom: black 2px solid;
-  box-shadow: 0px 3px 13px #9356DC; }
+  box-shadow: 0px 0px 8px #9356DC; }
   header img {
     margin-top: 0px;
     max-width: 100%; }
@@ -64,7 +64,8 @@ section {
   flex-grow: 1;
   max-width: 40%;
   max-width: 300px;
-  margin-left: 5px; }
+  margin-left: 5px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; }
   .Restaurant figure {
     display: flex; }
     .Restaurant figure img {
@@ -228,7 +229,7 @@ button {
   padding-right: 0px;
   border-radius: 13px;
   border: 0px;
-  box-shadow: 0px 0px 3px black;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   max-width: 100%;
   margin-top: 5px;
   margin-left: 5px;
