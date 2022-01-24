@@ -136,6 +136,24 @@ section{
 		font-weight: bold;
 	}
 
+	.fas {
+		opacity: 0;
+		transition: 150ms;
+		position: relative;
+		right: 16px;
+		background: -webkit-linear-gradient(#cd27e3, #f2dcf5);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		&:hover + .far{
+			color: yellow;
+		}
+  	}
+
 	figure{
 		display: flex;
 		img{
@@ -212,6 +230,7 @@ section{
 			counter-increment: li;
 			@include margins(0,0,0,5px);
 			width: 275PX;
+			min-height: 64px;
 			font-size: 1.3em;
 
 			&::before {
@@ -220,7 +239,7 @@ section{
 				display: inline-block;
 				width: 1em;
 				position: relative;
-				right: 1.5em;
+				right: 0.5em;
 				border-radius: 15px;
 				background: $color_2;
 				text-align: center;
@@ -546,13 +565,13 @@ button{
 @keyframes apparition {
 	0%{
 		opacity: 0;
-		left: 50px;
+		top: 50px;
 		position:relative;
 	}
 
 	100%{
 		opacity: 1;
-		left: 0px;
+		top: 0px;
 		position: relative;
 	}
 }

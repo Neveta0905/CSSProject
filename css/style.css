@@ -103,6 +103,18 @@ section {
     width: 80px;
     text-align: center;
     font-weight: bold; }
+  .Restaurant .fas {
+    opacity: 0;
+    transition: 150ms;
+    position: relative;
+    right: 16px;
+    background: -webkit-linear-gradient(#cd27e3, #f2dcf5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+    .Restaurant .fas:hover {
+      opacity: 1; }
+    .Restaurant .fas:hover + .far {
+      color: yellow; }
   .Restaurant figure {
     display: flex; }
     .Restaurant figure img {
@@ -159,6 +171,7 @@ section {
       margin-top: 0;
       margin-bottom: 5px;
       width: 275PX;
+      min-height: 64px;
       font-size: 1.3em; }
       .explain_list #General_description li::before {
         content: counter(li);
@@ -166,7 +179,7 @@ section {
         display: inline-block;
         width: 1em;
         position: relative;
-        right: 1.5em;
+        right: 0.5em;
         border-radius: 15px;
         background: #FF79DA;
         text-align: center; }
@@ -385,11 +398,11 @@ button {
 @keyframes apparition {
   0% {
     opacity: 0;
-    left: 50px;
+    top: 50px;
     position: relative; }
   100% {
     opacity: 1;
-    left: 0px;
+    top: 0px;
     position: relative; } }
 @keyframes overhide {
   0% {
