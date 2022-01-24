@@ -35,7 +35,7 @@ html{
 body{
 	@include margins(0px,0px,0px,0px);
 	background: #F2F2F2;
-	height: 100%;
+	min-height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -59,20 +59,41 @@ header{
 	margin-bottom: 10px;
 }
 
+
 #Location{
 	padding-left: 10px;
 	padding-top : 10px;
 	background: rgba(192, 192, 192, 0.3);
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 
 	*{
 		border: none;
 		background:none;
-		font-size: 30px;
+		font-size: 24px;
+	}
+
+	input{
+		text-align: center;
+		width: 175px;
 	}
 
 	text-align: center;
 }
 
+.description{
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 15px;
+	padding-bottom: 20px;
+	background: rgba(192, 192, 192, 0.15);
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+	h2{
+		margin-bottom: 0px;
+	}
+}
 
 a{
 	text-decoration: none;
@@ -92,6 +113,7 @@ section{
 }
 
 .Restaurant{
+	position: relative;
 	width: min-content;
 	min-width: 275px;
 	@include margins(0,0,0,5px);
@@ -103,6 +125,16 @@ section{
 	max-width: 300px;
 	margin-left: 5px;
 	box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+	.label_new{
+		position:absolute;
+		background: rgba($color_3, 1);
+		right: 5px;
+		top: 3px;
+		width: 80px;
+		text-align: center;
+		font-weight: bold;
+	}
 
 	figure{
 		display: flex;
@@ -148,17 +180,7 @@ section{
 			padding-left: 8px;
 		}
 
-		.fas{
-			opacity: 0.1;
-			transition: 50ms;
-			position: relative;
-			right: 16px;
-		}
-
-		.fas:hover{
-			opacity: 1;
-			color: radial-gradient(purple,white);
-		}
+		
 	}
 }
 
@@ -181,7 +203,7 @@ section{
 
 		.form_icon{
 			margin-right: 5px;
-			color: grey;
+			color: rgba(blue, 0.3);
 		}
 
 		li{
@@ -222,7 +244,7 @@ footer{
 	}
 }
 
-#command{
+.action_button{
 	margin-top: 15px;
 	width: 250px;
 	height: 50px;
@@ -233,12 +255,13 @@ footer{
 	margin-right: auto;
 	background: $color_2;
 
-	&:hover, &:hover *{
+	&:hover{
 		cursor: pointer;
+		background:rgba($color_2, 0.8);
 	}
 
 	input{
-		background: none;
+		background: transparent;
 		border:none;
 		color: white;
 		font-size: 30px;
@@ -265,6 +288,7 @@ body{
 	justify-content: center;
 	display: flex;
 	align-items: center;
+	z-index: 1000;
 	&_logo{
 		animation:spinning_logo 0.5s linear infinite;
 		height: 200px;
