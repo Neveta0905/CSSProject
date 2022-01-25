@@ -89,9 +89,22 @@ header{
 	padding-bottom: 20px;
 	background: rgba(192, 192, 192, 0.15);
 	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	text-align: center;
 
 	h2{
 		margin-bottom: 0px;
+	}
+
+	.explore_button{
+		background: linear-gradient(#e972da,#a95ddb);
+		color: white;
+		min-width: 200px;
+		min-height: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-weight: bold;
+		border-radius:15px
 	}
 }
 
@@ -116,7 +129,7 @@ section{
 	position: relative;
 	width: min-content;
 	min-width: 275px;
-	@include margins(0,0,0,5px);
+	@include margins(0,0,0,15px);
 	border-radius: 17px;
 	display: flex;
 	flex-direction: column;
@@ -128,19 +141,21 @@ section{
 
 	.label_new{
 		position:absolute;
-		background: rgba($color_3, 1);
+		background: #99e2d0;
 		right: 5px;
 		top: 3px;
 		width: 80px;
 		text-align: center;
 		font-weight: bold;
+		color: #0a8d6d;
 	}
 
 	.fas {
 		opacity: 0;
 		transition: 150ms;
+		font-size: 20px;
 		position: relative;
-		right: 16px;
+		right: 11px;
 		background: -webkit-linear-gradient(#cd27e3, #f2dcf5);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
@@ -148,10 +163,11 @@ section{
 		&:hover {
 			opacity: 1;
 		}
+  	}
 
-		&:hover + .far{
-			color: yellow;
-		}
+  	.far{
+  		position: relative;
+  		left: 7px;
   	}
 
 	figure{
@@ -221,7 +237,7 @@ section{
 
 		.form_icon{
 			margin-right: 5px;
-			color: rgba(blue, 0.3);
+			color: #7e7e7e;
 		}
 
 		li{
@@ -241,7 +257,7 @@ section{
 				position: relative;
 				right: 0.5em;
 				border-radius: 15px;
-				background: $color_2;
+				background: #9356dc;
 				text-align: center;
 			}
 		}
@@ -257,21 +273,27 @@ footer{
 	ul{
 		list-style: none;
 		margin-bottom: 0px;
+
+		li{
+			margin-bottom: 4px;
+		}
 	}
 	*{
 		color: white;
 	}
+
+	.title{
+		margin-bottom: 6px;
+	}
 }
 
 .action_button{
-	margin-top: 15px;
+	@include margins(auto,auto,15px,15px);
 	width: 250px;
 	height: 50px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-left: auto;
-	margin-right: auto;
 	background: $color_2;
 
 	&:hover{
@@ -371,7 +393,7 @@ section{
 			grid-template-columns: repeat(3, 1fr);
 		}
 		@media (max-width: 600px){
-			grid-template-columns: repeat(2, 1fr);
+			grid-template-columns: repeat(1, 1fr);
 		}
 	}
 }
