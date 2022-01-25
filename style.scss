@@ -85,7 +85,6 @@ header{
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	margin-bottom: 15px;
 	padding-bottom: 20px;
 	background: rgba(192, 192, 192, 0.15);
 	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -99,12 +98,20 @@ header{
 		background: linear-gradient(#e972da,#a95ddb);
 		color: white;
 		min-width: 200px;
-		min-height: 30px;
+		min-height: 50px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		font-weight: bold;
-		border-radius:15px
+		border-radius:25px;
+		font-size:20px;
+		padding-left:10px;
+		padding-right:10px;
+
+		&:hover{
+			background: linear-gradient(rgba(#e972da,0.7),rgba(#a95ddb,0.7));
+			cursor: pointer;
+		}
 	}
 }
 
@@ -114,11 +121,6 @@ a{
 	display: contents;
 }
 
-section{
-	margin-left: 5px;
-	border-left: $color_3 solid 2px;
-	padding-left: 2px;
-}
 #Restaurants{
 	display: flex;
 	flex-wrap: wrap;
@@ -188,6 +190,9 @@ section{
 	}
 	&_description{
 		display: flex;
+		padding-bottom: 9px;
+		padding-top: 9px;
+
 		*{
 		margin: 0px;
 		color: black;
@@ -196,7 +201,8 @@ section{
 		}
 
 		h3{
-			font-size: 32px;
+			font-size: 22px;
+			font-weight: bold;
 		}
 
 		p{
@@ -222,10 +228,18 @@ section{
 	justify-content: center;
 	display: flex;
 	flex-direction: column;
+	background:white;
+	padding-top:15px;
+	padding-bottom:15px;
 
-	p{
+	&_title{
 		width: fit-content;
 		margin: auto;
+		margin-bottom: 10px;
+	}
+
+	p{
+		flex: 1;
 	}
 
 	#General_description{
@@ -238,27 +252,47 @@ section{
 		.form_icon{
 			margin-right: 5px;
 			color: #7e7e7e;
+			margin-left: 15px;
 		}
 
 		li{
 			border-radius: 15px;
-			border: solid black 1px;
+			box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;;
 			counter-increment: li;
 			@include margins(0,0,0,5px);
 			width: 275PX;
 			min-height: 64px;
 			font-size: 1.3em;
+			background: rgba(192, 192, 192, 0.3);
+			margin-bottom: 10px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			padding-left: 5px;
 
 			&::before {
 				content: counter(li);
 				color: white;
 				display: inline-block;
 				width: 1em;
-				position: relative;
-				right: 0.5em;
+				position: absolute;
+				left: -8px;
 				border-radius: 15px;
 				background: #9356dc;
 				text-align: center;
+			}
+
+			&::after{
+				background: blue;
+			}
+
+			&:hover{
+				background: rgba(#9356dc,0.3);
+
+				.form_icon{
+					color: #9356dc;
+				}
 			}
 		}
 	}
@@ -295,6 +329,7 @@ footer{
 	justify-content: center;
 	align-items: center;
 	background: $color_2;
+	margin-bottom: 90px;
 
 	&:hover{
 		cursor: pointer;
@@ -320,7 +355,7 @@ body{
 #loader{
 	width: 100%;
 	height: 100%;
-	position: absolute;
+	position: fixed;
 	top: 0px;
 	left: 0px;
 	visibility: hidden;
@@ -364,7 +399,7 @@ body{
 	}
 
 	:nth-child(2){
-		min-width: 60px;
+		min-width: 20px;
 		text-align: center;
 		margin: auto;
 	}
@@ -373,31 +408,59 @@ body{
 		opacity: 0.1;
 		transition: 50ms;
 		position: relative;
-		right: 38px;
+		right: 19px;
+		font-size: 19px;
 		margin: auto;
+		background: -webkit-linear-gradient(#cd27e3, #f2dcf5);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+
+		&:hover{
+			opacity: 1;
 		}
-
-	.fas:hover{
-		opacity: 1;
 	}
-
 }
 section{
-	margin-left: 30px;
 	.buttons{
 		display: grid;
-		padding-right: 15px;
+		padding-left: 10px;
+		padding-right: 10px;
 		grid-row-gap: 10px;
 		column-gap: 5px;
 		@media (min-width: 600px){
 			grid-template-columns: repeat(3, 1fr);
+			margin-left: 30px;
 		}
 		@media (max-width: 600px){
 			grid-template-columns: repeat(1, 1fr);
 		}
 	}
+
+	&[class*='meal']{
+		> p:nth-child(1n){
+			margin-bottom: 0px;
+		}
+	}
+
+	hr{
+		border-bottom: 3px solid $color_3;
+		color: transparent;
+		width: 30px;
+		@include margins(0px,0px,0px,15px);
+	}
+
+	h2{
+		padding-left: 15px;
+	}
 }
 
+
+form{
+	section{
+		padding-left: 15px;
+		padding-right:15px;
+	}
+}
 button{
 	display: flex;
 	padding-right: 0px;
@@ -420,6 +483,10 @@ button{
 		height: 100%;
 		width: calc(100% - 30px);
 
+		h5{
+			font-weight: bold;
+		}
+
 		@media (max-width: 415px) {
 			margin-right: 0px;
 		}
@@ -430,6 +497,7 @@ button{
 
 		:nth-child(1){
 			text-align: left;
+			padding-bottom: 8px;
 			margin-bottom: 5px;
 			font-size: 23px;
 			flex: 1;
@@ -449,16 +517,18 @@ button{
 				overflow: hidden;
 				width: 100px;
 				font-size: 14px;
-				font-family: 'High Tower Text';
 			}
 
 			:nth-child(2){
 				font-weight: bold;
 				font-size: 25px;
+				position: relative;
+				bottom:13px;
+				margin-right: 10px;
 
 				@media (max-width: 415px) {
 				font-size: 15px;
-			}
+				}
 			}
 		}
 	}
@@ -487,7 +557,7 @@ button{
 
 	&:hover, &:active{
 		.meal_check{
-		width: 30px;
+		width: 50px;
 
 			i{
 				font-size: 15px;
@@ -554,32 +624,26 @@ button{
 
 @media (max-width: 600px){
 	.meal_enter button{
-		&:nth-child(2n + 1){
-			animation: 1s apparition;
-		}
-
-		&:nth-child(2n + 2){
-			animation: 1.5s apparition;
+		@for $i from 1 through 10{
+			&:nth-child( n + #{$i} ){
+				animation: $i*0.5+1s apparition;
+			}
 		}
 	}
 
 	.meal_main button{
-		&:nth-child(2n + 1){
-			animation: 2.5s apparition;
-		}
-
-		&:nth-child(2n + 2){
-			animation: 3s apparition;
+		@for $i from 1 through 10{
+			&:nth-child( n + #{$i} ){
+				animation: $i*0.5+1s apparition;
+			}
 		}
 	}
 
 	.meal_last button{
-		&:nth-child(2n + 1){
-			animation: 4s apparition;
-		}
-
-		&:nth-child(2n + 2){
-			animation: 4.5s apparition;
+		@for $i from 1 through 10{
+			&:nth-child( n + #{$i} ){
+				animation: $i*0.5+1s apparition;
+			}
 		}
 	}
 }
