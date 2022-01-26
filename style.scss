@@ -143,6 +143,8 @@ a{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .Restaurant{
@@ -242,6 +244,10 @@ a{
 	}
 }
 
+.welcome_first{
+	margin-left: 0px;
+}
+
 .explain_list{
 	justify-content: center;
 	display: flex;
@@ -254,6 +260,9 @@ a{
 		width: fit-content;
 		margin: auto;
 		margin-bottom: 10px;
+		position: relative;
+		right: 72px;
+		font-weight: bold;
 	}
 
 	p{

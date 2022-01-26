@@ -103,7 +103,9 @@ a {
 #Restaurants {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px; }
 
 .Restaurant {
   position: relative;
@@ -178,6 +180,9 @@ a {
       flex: 1;
       padding-left: 8px; }
 
+.welcome_first {
+  margin-left: 0px; }
+
 .explain_list {
   justify-content: center;
   display: flex;
@@ -188,7 +193,10 @@ a {
   .explain_list_title {
     width: fit-content;
     margin: auto;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    position: relative;
+    right: 72px;
+    font-weight: bold; }
   .explain_list p {
     flex: 1; }
   .explain_list #General_description {
