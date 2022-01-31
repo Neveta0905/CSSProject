@@ -372,11 +372,8 @@ footer{
 }
 
 // Pallier le dépassement du loader
-#loader, body{
+#loader{
 	animation-duration: 2000ms;
-}
-body{
-	animation-name: overhide;
 }
 
 #loader{
@@ -569,7 +566,6 @@ button{
 		border-top-right-radius: 13px;
 		border-bottom-right-radius:13px;
 		height: 100%;
-		transition: 500ms;
 		flex-shrink: 0;
 
 		i{
@@ -686,14 +682,5 @@ button{
 		opacity: 1;
 		top: 0px;
 		position: relative;
-	}
-}
-
-@keyframes overhide {
-	0%{
-		overflow: hidden;
-	}
-	100%{
-		overflow: hidden;
 	}
 }
