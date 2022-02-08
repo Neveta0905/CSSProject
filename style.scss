@@ -287,7 +287,7 @@ a{
 			box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;;
 			counter-increment: li;
 			@include margins(0,0,0,5px);
-			width: 275PX;
+			width: 350px;
 			min-height: 64px;
 			font-size: 1.3em;
 			background: rgba(192, 192, 192, 0.3);
@@ -320,6 +320,15 @@ a{
 				.form_icon{
 					color: #9356dc;
 				}
+			}
+
+			p{
+				font-weight: bold;
+				margin-left: 20px;
+			}
+
+			i{
+				width: 20.8px;
 			}
 		}
 	}
@@ -583,7 +592,7 @@ button{
 		width: 57px;
 
 			i{
-				font-size: 15px;
+				font-size: 26px;
 				animation: spinning_check 500ms;
 			}
 		}

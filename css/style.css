@@ -217,7 +217,7 @@ a {
       margin-right: 0;
       margin-top: 0;
       margin-bottom: 5px;
-      width: 275PX;
+      width: 350px;
       min-height: 64px;
       font-size: 1.3em;
       background: rgba(192, 192, 192, 0.3);
@@ -243,6 +243,11 @@ a {
         background: rgba(147, 86, 220, 0.3); }
         .explain_list #General_description li:hover .form_icon {
           color: #9356dc; }
+      .explain_list #General_description li p {
+        font-weight: bold;
+        margin-left: 20px; }
+      .explain_list #General_description li i {
+        width: 20.8px; }
 
 footer {
   background: rgba(0, 0, 0, 0.8);
@@ -437,7 +442,7 @@ button {
   button:hover .meal_check, button:active .meal_check {
     width: 57px; }
     button:hover .meal_check i, button:active .meal_check i {
-      font-size: 15px;
+      font-size: 26px;
       animation: spinning_check 500ms; }
 
 @keyframes spinning_check {
